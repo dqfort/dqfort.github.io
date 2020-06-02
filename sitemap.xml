@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2020-06-02T12:05:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2020-06-02T12:05:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/querying-in-prometheus/</loc>
+    <lastmod>2020-06-02T12:05:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/simple-ways-to-split-large-list-into-celery/</loc>
+    <lastmod>2020-05-24T22:24:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/half-is-one-minus-one-plus-one-and-so-on/</loc>
+    <lastmod>2020-05-21T23:58:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/build-autocomplete-with-angular-material/</loc>
+    <lastmod>2020-03-07T17:11:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+  </url>
+  
+</urlset>

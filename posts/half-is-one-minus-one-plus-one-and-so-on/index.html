@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <h1>1/2 = 1 - 1 &#43; 1 - 1 &#43; 1 ...</h1>
+    <span>2020-05-21 23:58:08 &#43;0800 HKT</span>
+    <div>
+      <p>There is a mathematics question:
+$$1 - 1 + 1 - 1 + 1 &hellip;$$ for infinitely
+you might know the answer is 1/2 by a simple proof:
+$$\text{Let}\ S = 1 - 1 + 1 - 1 &hellip;$$
+$$S = 1 - (1 - 1 + 1 - 1 &hellip;)$$
+$$S = 1 - S$$
+$$S = \frac 1 2$$</p>
+<p>The result seems quite not make sense since when you calculate that step by step,
+it always return 0 or 1.
+So how is it possible? let&rsquo;s try to reverse the answers:
+$$\frac 1 2 = (1-\frac 1 2) = (1 - (1 - \frac 1 2)) = (1 - (1 - (1 - \frac 1 2))) = (1 - (1 - (1 - (1 - &hellip;)))) = 1 - 1 + 1 - 1 &hellip;$$</p>
+<p>It does make sense, but why we cannot calculate 1 - 1 + 1 - 1 &hellip; directly?
+It&rsquo;s because it was calculated step by step and will never be infinite!</p>
+<p>I also write a simple script of it
+<a href="https://stackblitz.com/edit/half-infinty">https://stackblitz.com/edit/half-infinty</a></p>
+
+    </div>
+  </body>
+</html>

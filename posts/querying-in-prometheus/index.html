@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <h1>Querying in Prometheus</h1>
+    <span>2020-06-02 12:05:41 &#43;0800 HKT</span>
+    <div>
+      <p>By using <a href="https://prometheus.io/">prometheus</a>, server monitoring becomes much easier.
+Prometheus cannot provide any server system information, which need to collect from <a href="https://prometheus.io/docs/guides/node-exporter/">node explorer</a> or <a href="https://github.com/google/cadvisor">cadvisor</a>.</p>
+<p>So what is promethus for? one of the features is querying by
+<a href="https://prometheus.io/docs/prometheus/latest/querying/basics/">PromQL</a>, to generate more meaningful information.</p>
+<p>For example, if we want to know CPU usage of containers,
+we can use:</p>
+<pre><code>rate(container_cpu_seconds_total[5m]) * 100
+</code></pre><p>container_cpu_seconds_total is how many seconds of CPU used in a container, rate is a function to take average value in range, 5m means 5 minutes and * 100 to convert to percentage.</p>
+<p>If we get two servers with same configaration and we want to see the avarage CPU usages, it can be querying by:</p>
+<pre><code>(sum by (name) (rate(container_cpu_seconds_total[5m]) * 100))/(count by (name) (container_cpu_seconds_total))
+</code></pre><p>using sum by name to get the values group by name, and count by name to get the count of containers, then the result is average of two servers CPU usage.</p>
+
+    </div>
+  </body>
+</html>

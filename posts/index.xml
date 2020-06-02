@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dqfort&#39;s blog</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in Posts on Dqfort&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jun 2020 12:05:41 +0800</lastBuildDate>
+    
+	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Querying in Prometheus</title>
+      <link>http://example.org/posts/querying-in-prometheus/</link>
+      <pubDate>Tue, 02 Jun 2020 12:05:41 +0800</pubDate>
+      
+      <guid>http://example.org/posts/querying-in-prometheus/</guid>
+      <description>By using prometheus, server monitoring becomes much easier. Prometheus cannot provide any server system information, which need to collect from node explorer or cadvisor.
+So what is promethus for? one of the features is querying by PromQL, to generate more meaningful information.
+For example, if we want to know CPU usage of containers, we can use:
+rate(container_cpu_seconds_total[5m]) * 100 container_cpu_seconds_total is how many seconds of CPU used in a container, rate is a function to take average value in range, 5m means 5 minutes and * 100 to convert to percentage.</description>
+    </item>
+    
+    <item>
+      <title>Simple Ways to Split Large List into Celery</title>
+      <link>http://example.org/posts/simple-ways-to-split-large-list-into-celery/</link>
+      <pubDate>Sun, 24 May 2020 22:24:52 +0800</pubDate>
+      
+      <guid>http://example.org/posts/simple-ways-to-split-large-list-into-celery/</guid>
+      <description>When getting a large list of records from database it causes that task running very slow in Celery. Celery is a task worker that usually to handle time consume job in daemon.
+Let say we get 2000+ records in a database table posts, a simple way to split that just limit the records from the query
+# using django ORM syntax, get 100 records each time posts = Post.objects.all()[:100] for post in posts: handle_post.</description>
+    </item>
+    
+    <item>
+      <title>1/2 = 1 - 1 &#43; 1 - 1 &#43; 1 ...</title>
+      <link>http://example.org/posts/half-is-one-minus-one-plus-one-and-so-on/</link>
+      <pubDate>Thu, 21 May 2020 23:58:08 +0800</pubDate>
+      
+      <guid>http://example.org/posts/half-is-one-minus-one-plus-one-and-so-on/</guid>
+      <description>There is a mathematics question: $$1 - 1 + 1 - 1 + 1 &amp;hellip;$$ for infinitely you might know the answer is 1/2 by a simple proof: $$\text{Let}\ S = 1 - 1 + 1 - 1 &amp;hellip;$$ $$S = 1 - (1 - 1 + 1 - 1 &amp;hellip;)$$ $$S = 1 - S$$ $$S = \frac 1 2$$
+The result seems quite not make sense since when you calculate that step by step, it always return 0 or 1.</description>
+    </item>
+    
+    <item>
+      <title>Build Autocomplete With Angular Material</title>
+      <link>http://example.org/posts/build-autocomplete-with-angular-material/</link>
+      <pubDate>Sat, 07 Mar 2020 17:11:48 +0800</pubDate>
+      
+      <guid>http://example.org/posts/build-autocomplete-with-angular-material/</guid>
+      <description>Angular Material provides rich UI controls, such as Autocomplete, is very a general UI control for finding a value from a long dataset. In this article we explore how to build an Autocomplete control connected with HTTP service, here is a complete example.
+Install Angular Materail is very easy, just follow the Getting started from the guides. After the installation import the autocomplete control in app module
+import {MatAutocompleteModule} from &amp;#39;@angular/material/autocomplete&amp;#39;; import {MatInputModule} from &amp;#39;@angular/material/input&amp;#39;; @NgModule({ imports: [ MatAutocompleteModule, MatInputModule, ], }) You can check the import statement from API reference, MatInputModule is also requried for this example</description>
+    </item>
+    
+  </channel>
+</rss>
