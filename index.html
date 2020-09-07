@@ -95,7 +95,7 @@ Giving a number N, build a string that contains 1 to N, but if a number is mutip
             <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
 
     <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</code></pre></div><p>It&rsquo;s still get O(n^2) since insert requires O(n^2), let&rsquo;s try to use deque:</p>
+</code></pre></div><p>It&rsquo;s still get O(n^2) since insert requires O(n), let&rsquo;s try to use deque:</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 
 <span class="k">def</span> <span class="nf">build_string</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
