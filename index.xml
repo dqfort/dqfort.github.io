@@ -6,10 +6,19 @@
     <description>Recent content on Dqfort&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jun 2020 12:05:41 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2020 13:27:39 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Care for Detail</title>
+      <link>http://example.org/posts/care-for-detail/</link>
+      <pubDate>Mon, 07 Sep 2020 13:27:39 +0800</pubDate>
+      
+      <guid>http://example.org/posts/care-for-detail/</guid>
+      <description>I used a lot of Python for development, it&amp;rsquo;s very convenient but also easily to make mistakes if you&amp;rsquo;re careless. One of the mistakes is abuse of list. In Python, list is an array like container. When you try to find a value in a list, the time complexity is O(n) but if do that in a set or a dict, the time complexity is O(1) and it&amp;rsquo;s faster. It&amp;rsquo;s better to use set or dict to storing unique key values rather than list.</description>
+    </item>
     
     <item>
       <title>Querying in Prometheus</title>
