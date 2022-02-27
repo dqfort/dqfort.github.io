@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Dqfort&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2020 13:27:39 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Feb 2022 21:50:00 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Webview App Architecture</title>
+      <link>http://example.org/posts/webview-app-architecture/</link>
+      <pubDate>Sun, 27 Feb 2022 21:50:00 +0800</pubDate>
+      
+      <guid>http://example.org/posts/webview-app-architecture/</guid>
+      <description>To build mobile app, you might consider using React native or Flutter. But using webview could also be considered, as following diagram:
+As you see the HTML content can share to both Android and iOS as UI development. You might also notice that also includes web servers in mobile app, there are some purposes for the setup:
+ To run web frameworks properly (Most frontend framework needs HTTP server for routing) Handle async action easier via http request/response More security as you can hidden tokens in mobile, using the web server as proxy  In Android, I found Ktor for setup a web server:</description>
+    </item>
     
     <item>
       <title>Care for Detail</title>
