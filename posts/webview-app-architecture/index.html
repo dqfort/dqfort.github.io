@@ -21,15 +21,15 @@
 
             <span class="k">val</span> <span class="py">reg</span> <span class="p">=</span> <span class="n">Regex</span><span class="p">(</span><span class="s">&#34;png|jpg|js|css|ico|json|svg&#34;</span><span class="p">)</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">ext</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">reg</span><span class="p">.</span><span class="n">matches</span><span class="p">(</span><span class="n">ext</span><span class="p">))</span> <span class="p">{</span>
-                <span class="k">var</span> <span class="py">contentType</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
-                <span class="k">when</span> <span class="p">(</span><span class="n">ext</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="s">&#34;icon&#34;</span> <span class="p">-&gt;</span> <span class="n">contentType</span> <span class="p">=</span> <span class="s">&#34;image/x-icon&#34;</span>
-                    <span class="s">&#34;jpg&#34;</span> <span class="p">-&gt;</span> <span class="n">contentType</span> <span class="p">=</span> <span class="s">&#34;image/jpeg&#34;</span>
-                    <span class="s">&#34;png&#34;</span> <span class="p">-&gt;</span> <span class="n">contentType</span> <span class="p">=</span> <span class="s">&#34;image/png&#34;</span>
-                    <span class="s">&#34;css&#34;</span> <span class="p">-&gt;</span> <span class="n">contentType</span> <span class="p">=</span> <span class="s">&#34;text/css; charset=UTF-8&#34;</span>
-                    <span class="s">&#34;js&#34;</span> <span class="p">-&gt;</span> <span class="n">contentType</span> <span class="p">=</span> <span class="s">&#34;application/javascript; charset=UTF-8&#34;</span>
-                    <span class="s">&#34;json&#34;</span> <span class="p">-&gt;</span> <span class="n">contentType</span> <span class="p">=</span> <span class="s">&#34;application/json; charset=UTF-8&#34;</span>
-                    <span class="s">&#34;svg&#34;</span> <span class="p">-&gt;</span> <span class="n">contentType</span> <span class="p">=</span> <span class="s">&#34;image/svg+xml&#34;</span>
+                <span class="k">var</span> <span class="py">contentType</span> <span class="p">=</span> <span class="k">when</span> <span class="p">(</span><span class="n">ext</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="s">&#34;ico&#34;</span> <span class="p">-&gt;</span> <span class="s">&#34;image/x-icon&#34;</span>
+                    <span class="s">&#34;jpg&#34;</span> <span class="p">-&gt;</span> <span class="s">&#34;image/jpeg&#34;</span>
+                    <span class="s">&#34;png&#34;</span> <span class="p">-&gt;</span> <span class="s">&#34;image/png&#34;</span>
+                    <span class="s">&#34;css&#34;</span> <span class="p">-&gt;</span> <span class="s">&#34;text/css; charset=UTF-8&#34;</span>
+                    <span class="s">&#34;js&#34;</span> <span class="p">-&gt;</span> <span class="s">&#34;application/javascript; charset=UTF-8&#34;</span>
+                    <span class="s">&#34;json&#34;</span> <span class="p">-&gt;</span> <span class="s">&#34;application/json; charset=UTF-8&#34;</span>
+                    <span class="s">&#34;svg&#34;</span> <span class="p">-&gt;</span> <span class="s">&#34;image/svg+xml&#34;</span>
+                    <span class="k">else</span> <span class="p">-&gt;</span> <span class="s">&#34;text/plain&#34;</span>
                 <span class="p">}</span>
 
                 <span class="n">call</span><span class="p">.</span><span class="n">respondOutputStream</span><span class="p">(</span><span class="n">ContentType</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">contentType</span><span class="p">))</span> <span class="p">{</span>
@@ -46,7 +46,7 @@
     <span class="p">}</span>
 <span class="p">}.</span><span class="n">start</span><span class="p">()</span>
 </code></pre></div><p>This will execute the react app under assets/myreactapp folder when broswing http://localhost:8080/myreactapp/ in webview.</p>
-<p>Now <a href="https://ktor.io/">Ktor</a> server didn&rsquo;t support iOS so you might find some alternatives.</p>
+<p>Til now <a href="https://ktor.io/">Ktor</a> server didn&rsquo;t support iOS so you might find some alternatives.</p>
 <p>Using WebView can share UI development for both Android and iOS, but you still need develop REST APIs for each platform. It still have some benefits as you can using all native features and get native performance.</p>
 
     </div>
